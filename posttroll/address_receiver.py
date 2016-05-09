@@ -45,7 +45,7 @@ __all__ = ('AddressReceiver', 'getaddress')
 logger = logging.getLogger(__name__)
 
 debug = os.environ.get('DEBUG', False)
-broadcast_port = 21200
+broadcast_port = int(os.environ.get("NAMESERVER_BROADCAST_PORT", 21200))
 
 default_publish_port = 16543
 
